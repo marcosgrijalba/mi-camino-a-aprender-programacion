@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página del Millón de Dólares en Español</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			background-color: #8a8585;
+			font-family: Arial, sans-serif;
+			color: #373737;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #a8c3e2;
+			padding: 10px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-size: 50px;
+		}
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.box {
+			width: 10px;
+			height: 10px;
+			border: 1px solid #000000;
+			background-color: #1a3aad;
+			margin: 1px;
+			transition: background-color 0.3s;
+			cursor: pointer;
+		}
+		.box:hover {
+			background-color: #000000;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>La pagina del Millon</h1>
+		<p>¡Compra un pixel y ayuda a crear una obra de arte en línea!</p>
+	</header>
+	<div class="container">
+		<script>
+			var boxes = [];
+			for (var i = 0; i < 10065; i++) {
+				var box = document.createElement('div');
+				box.classList.add('box');
+				box.addEventListener('click', function() {
+					var color = document.getElementById('color-picker').value;
+					this.style.backgroundColor = color;
+				});
+				boxes.push(box);
+			}
+			var container = document.querySelector('.container');
+			boxes.forEach(function(box) {
+				container.appendChild(box);
+			});
+		</script>
+	</div>
+	<div style="text-align: center; margin: 20px;">
+		<input type="color" id="color-picker">
+		<button onclick="window.alert('¡Gracias por tu compra!')">Comprar Pixel</button>
+	</div>
+</body>
+</html>

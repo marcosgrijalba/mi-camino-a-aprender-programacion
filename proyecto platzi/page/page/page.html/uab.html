@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Preguntas de Boca Juniors</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+	background-color: #fff;
+	font-family: Arial, sans-serif;
+	color: #333;
+}
+
+header {
+	background-color: #002a5c;
+	color: #fff;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 32px;
+}
+
+nav {
+	margin-top: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin: 0 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #f2f2f2;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+section {
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+	margin-top: 0;
+	color: #002a5c;
+	font-size: 24px;
+}
+
+section p {
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+footer {
+	background-color: #002a5c;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	font-size: 14px;
+}
+
+@media (max-width: 600px) {
+	header h1 {
+		font-size: 24px;
+	}
+
+	nav li {
+		margin: 0 10px;
+	}
+
+	section h2 {
+		font-size: 20px;
+	}
+
+	section p {
+		font-size: 14px;
+	}
+
+	footer {
+		font-size: 12px;
+	}
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+button {
+	background-color: #002a5c;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #003366;
+}
+
+
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Preguntas de Boca Juniors</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Preguntas frecuentes</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>¿Cuál fue el primer título internacional que ganó Boca Juniors?</h2>
+			<p>Respuesta: La Copa Libertadores de América en el año 1977.</p>
+		</section>
+		<section>
+			<h2>¿Quiénes son los máximos goleadores históricos de Boca Juniors?</h2>
+			<p>Respuesta: Martín Palermo y Roberto Cherro, ambos con 218 goles.</p>
+		</section>
+		<section>
+			<h2>¿Cuántas veces ha ganado Boca Juniors la Copa Libertadores?</h2>
+			<p>Respuesta: Boca Juniors ha ganado la Copa Libertadores en seis ocasiones (1977, 1978, 2000, 2001, 2003 y 2007).</p>
+		</section>
+        <section>
+            <h2>¿En qué año Boca Juniors ganó su primer Copa Libertadores?</h2>
+            <form>
+                <label for="opcion1">
+                    <input type="radio" name="respuesta" id="opcion1" value="1982">
+                    <span>1982</span>
+                </label>
+                <label for="opcion2">
+                    <input type="radio" name="respuesta" id="opcion2" value="1977">
+                    <span>1977</span>
+                </label>
+                <label for="opcion3">
+                    <input type="radio" name="respuesta" id="opcion3" value="2000">
+                    <span>2000</span>
+                </label>
+                <label for="opcion4">
+                    <input type="radio" name="respuesta" id="opcion4" value="1993">
+                    <span>1993</span>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+	</main>
+	<footer>
+		<p>&copy; 2023 Preguntas de Boca Juniors. Todos los derechos reservados.</p>
+	</footer>
+</body>
+</html>

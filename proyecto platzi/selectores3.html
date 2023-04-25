@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: salmon;
+        }
+        p::first-letter {
+            color: deeppink;
+        }
+        p::before {
+            content: "👀";
+        }
+        p::after {
+            content: "✨";
+        }
+        p:hover {
+            color: skyblue;
+        }
+        div p:nth-child(2) {
+            color: sandybrown;
+        }
+        ::placeholder {
+            background-color: darkorange;
+        }
+        ::placeholder {
+            color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>Plazti</p>
+        <p>Lionel Messi</p>
+        <p>Rashford</p>
+    </div>
+    <input type="text" placeholder="nombre">
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adivina el número</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+  background-color: #FECB00;
+}
+
+h1 {
+  color: #00529B;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.button {
+  background-color: #00529B;
+  color: #FECB00;
+  border-radius: 5px;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #FED13D;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #FED13D;
+  border-radius: 10px;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 72px;
+  color: #00529B;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00529B;
+}
+
+.box:hover {
+  background-color: #00529B;
+  color: #FECB00;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+    </style>
+</head>
+<body>
+	<h1>Adivina el número</h1>
+	<p>Estoy pensando en un número del 1 al 100. ¡Adivina cuál es!</p>
+
+	<input type="number" id="guess" min="1" max="100">
+	<button onclick="guessNumber()">Adivinar</button>
+
+	<p id="result"></p>
+
+	<script>
+		// Generar un número aleatorio entre 1 y 100
+		let randomNumber = Math.floor(Math.random() * 100) + 1;
+		let attempts = 0;
+
+		function guessNumber() {
+			// Obtener el valor ingresado por el usuario
+			let guess = document.getElementById("guess").value;
+
+			// Aumentar el contador de intentos
+			attempts++;
+
+			// Verificar si el número ingresado es igual al número aleatorio
+			if (guess == randomNumber) {
+				document.getElementById("result").innerHTML = "¡Felicitaciones! Adivinaste en " + attempts + " intentos.";
+			} else if (guess < randomNumber) {
+				document.getElementById("result").innerHTML = "El número es mayor que " + guess + ". Seguí intentando.";
+			} else {
+				document.getElementById("result").innerHTML = "El número es menor que " + guess + ". Seguí intentando.";
+			}
+		}
+	</script>
+</body>
+</html>

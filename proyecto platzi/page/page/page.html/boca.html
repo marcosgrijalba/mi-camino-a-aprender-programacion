@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi sitio web de Boca Juniors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background-color: #0C2340;
+        color: #f5d742;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 36px;
+        text-shadow: 2px 2px #000000;
+      }
+      
+      h2 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      li {
+        margin-bottom: 10px;
+      }
+      
+      label {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 2px 2px #000000;
+      }
+      
+      input[type="radio"] {
+        display: none;
+      }
+      
+      input[type="radio"]:checked + label {
+        background-color: #f5d742;
+        color: #0C2340;
+      }
+      
+      #resultado {
+        display: none;
+        margin-top: 50px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #f5d742;
+        color: #0C2340;
+        box-shadow: 2px 2px #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Boca Juniors</h1>
+    
+    <h2>¿Quién es el máximo goleador de Boca Juniors?</h2>
+    <ul>
+      <li>
+        <input type="radio" id="respuesta1a" name="respuesta1" value="a">
+        <label for="respuesta1a">Martín Palermo</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta1b" name="respuesta1" value="b">
+        <label for="respuesta1b">Juan Román Riquelme</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta1c" name="respuesta1" value="c">
+        <label for="respuesta1c">Diego Maradona</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta1d" name="respuesta1" value="d">
+        <label for="respuesta1d">Gabriel Batistuta</label>
+      </ul>
+    </ul>
+
+    <h2>¿En qué año ganó Boca Juniors su primera Copa Libertadores?</h2>
+    <ul>
+      <li>
+        <input type="radio" id="respuesta2a" name="respuesta2" value="a">
+        <label for="respuesta2a">1960</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta2b" name="respuesta2" value="b">
+        <label for="respuesta2b">1977</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta2c" name="respuesta2" value="c">
+        <label for="respuesta2c">2000</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta2d" name="respuesta2" value="d">
+        <label for="respuesta2d">1981</label>
+      </li>
+    </ul>
+    
+    <h2>¿Quién es el entrenador actual de Boca Juniors?</h2>
+    <ul>
+      <li>
+        <input type="radio" id="respuesta3a" name="respuesta3" value="a">
+        <label for="respuesta3a">Miguel Ángel Russo</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta3b" name="respuesta3" value="b">
+        <label for="respuesta3b">Diego Maradona</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta3c" name="respuesta3" value="c">
+        <label for="respuesta3c">Carlos Bianchi</label>
+      </li>
+      <li>
+        <input type="radio" id="respuesta3d" name="respuesta3" value="d">
+        <label for="respuesta3d">Juan Román Riquelme</label>
+      </li>
+    </ul>
+    
+    <button onclick="verificarRespuestas()">Enviar respuestas</button>
+    
+    <div id="resultado"></div>
+    
+    <script>
+      function verificarRespuestas() {
+        let respuestasCorrectas = 0;
+        let respuesta1 = document.querySelector('input[name="respuesta1"]:checked').value;
+        let respuesta2 = document.querySelector('input[name="respuesta2"]:checked').value;
+        let respuesta3 = document.querySelector('input[name="respuesta3"]:checked').value;
+      }
+        if (respuesta1 === 'a') {
+          respuestasCorrectas++;
+          document.getElementById("respuesta1a").nextElementSibling.style.backgroundColor = "#55bf37";
+        } else {
+          document.getElementById("respuesta1" + respuesta1).nextElementSibling.style.backgroundColor = "#e74c3c";
+          document.getElementById("respuesta1a").nextElementSibling.style.backgroundColor = "#55bf37";
+        }
+        
+        if (respuesta2 === 'd') {
+          respuestasCorrectas++;
+          document.getElementById("respuesta2d").nextElementSibling.style.backgroundColor = "#55bf37";
+        } else {
+          document.getElementById("respuesta2" + respuesta2).nextElementSibling.style.backgroundColor = "#e74c3c";
+          document.getElementById("respuesta2d").nextElementSibling.style.backgroundColor = "#55bf37";
+        }
+        
+        if (respuesta3 === 'a') {
+          respuestasCorrectas++;
+          document.getElementById("respuesta3a").nextElementSibling.style.backgroundColor = "#55bf37";
+        } else {
+          document.getElementById("respuesta3" + respuesta3).nextElementSibling.style.backgroundColor = "#e74c3c";
+document.getElementById("respuesta3a").nextElementSibling.style.backgroundColor = "#55bf37";
+}
+{
+let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `Obtuviste ${respuestasCorrectas} respuestas correctas de 3 posibles.`;
+  }
+</script>
+  </body>
+</html>
+

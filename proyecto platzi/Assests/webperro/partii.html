@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pelotero Partii</title>
+    <style>
+      :root {
+        --primary-color: #565454;
+        --secondary-color: #000000;
+        --text-color: #000000;
+      }
+
+      body {
+        margin: 0;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16px;
+        color: var(--text-color);
+      }
+
+      .header {
+        background-image: url('https://i.pinimg.com/originals/0f/2e/09/0f2e09466f5ad87e867c2df9e6376d49.jpg');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        padding: 0 20px;
+        background-position: center;
+        opacity: 0.8;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px var(--secondary-color);
+      }
+
+      .header p {
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 20px;
+      }
+
+      .content {
+        padding: 50px;
+        text-align: justify;
+      }
+
+      .content h2 {
+        font-size: 2.5em;
+        margin-top: 0;
+      }
+
+      .content p {
+        font-size: 1.1em;
+        line-height: 1.5;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+      }
+
+      .gallery img {
+        width: 300px;
+        margin: 10px;
+      }
+
+      .footer {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: 40px;
+        text-align: center;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+
+      /* Estilos para enlaces */
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      a:hover {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+      }
+
+      .boton {
+  display: flex;
+  background-color: #238c15;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background-color: #ff9d36;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+      
+      @media (max-width: 640px) {
+            .menu {
+                display: block;
+            }
+            .navbar-left ul {
+                display: none;
+
+            }
+            .navbar-email {
+                 display: none;
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Pelotero Partii</h1>
+      <h2>Salon de eventos</h2>
+      <p>El lugar perfecto para celebrar</p>
+    </header>
+
+    <div class="content">
+      <h2>Veni a pasar un hermoso momento en Pelotero Partii</h2>
+      <p>Somos un salón de eventos que ofrece un espacio perfecto para cualquier tipo de celebración. Contamos con un equipo profesional que se encargará de que tu evento sea todo un éxito.</p>
+      <p>Ofrecemos una amplia variedad de servicios para que tu evento sea inolvidable. Desde la decoración hasta el catering, nos aseguramos de que todo esté perfectamente coordinado para que tú no tengas que preocuparte por nada.</p>
+      <p>Si estás interesado en celebrar tu evento con nosotros, no dudes en ponerte en <a href="#">contacto</a> con nosotros para más información.</p>
+      <ul>
+        <li>
+          📍 Ubicacion: Kennedy 1660 entre Mitre y San Martin, General Roca, Rio Negro
+        </li>
+        <li>         
+           📞Telefono: 2984750888
+        </li>
+      </ul>
+   
+    </div>
+
+    <div class="gallery">
+      <img src="https://media.cylex.com.ar/companies/1136/5581/images/-1328714561-img2_734515_large.jpg" alt="Imagen de evento">
+      <img src="https://media.cylex.com.ar/companies/1136/5581/images/-1328714561-img2_734515_large.jpg" alt="Imagen de evento">
+      <img src="https://media.cylex.com.ar/companies/1136/5581/images/-1328714561-img2_734515_large.jpg" alt="Imagen de evento">
+      <img src="https://media.cylex.com.ar/companies/1136/5581/images/-1328714561-img2_734515_large.jpg" alt="Imagen de evento">
+      <img src="https://media.cylex.com.ar/companies/1136/5581/images/-1328714561-img2_734515_large.jpg" alt="Imagen de evento">
+    </div>
+    <h3>
+      <a href="#" class="boton">Contáctanos</a>
+    </h3>
+    <footer class="footer">
+      <p>Salón de Eventos &copy; 2023 - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
+    
